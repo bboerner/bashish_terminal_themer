@@ -1,17 +1,5 @@
-# WELCOME TO BASHISH2
+# WELCOME TO BASHISH
 -------------------
-# Index
------
-1  About Bashish
-3  Getting started
-4  Changing theme
-6  Application themeing
-7  Shell Support
-8  Terminal Support
-9  ASCII-art Prompts
-10 Uninstalling Bashish
-11 Solaris specific notes
-
 
 # About Bashish
 -------------
