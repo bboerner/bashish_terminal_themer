@@ -3,7 +3,7 @@ BASHISH_NAME_VERSION="$(cat data/bashish-version)"
 cd dist
 cp "${BASHISH_NAME_VERSION}".tar.gz "${BASHISH_NAME_VERSION/-/_}".orig.tar.gz
 tar -xvzf "${BASHISH_NAME_VERSION}".tar.gz
-cp -rf ../deb-stuff "${BASHISH_NAME_VERSION}/debian"
+cp -rf ./deb-stuff "${BASHISH_NAME_VERSION}/debian"
 cd "${BASHISH_NAME_VERSION}"
 debuild -us -uc
 test x$? != 0 && exit 1

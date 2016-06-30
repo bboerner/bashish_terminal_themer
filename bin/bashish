@@ -1,5 +1,5 @@
 #!/bin/bash
-BASHISHDIR="/usr/local/share/bashish"
+BASHISHDIR="/home/thioshp/share/bashish"
 BASHISH_SHELL="/bin/bash"
 ##################################################################################
 ## Bashish, a console theme engine

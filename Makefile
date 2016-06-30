@@ -23,7 +23,7 @@
 BASHISH_SHELL := @BASHISH_SHELL@
 INSTALL := /usr/bin/install -c
 
-prefix = /usr/local
+prefix = /home/thioshp
 PACKAGE_TARNAME = bashish
 exec_prefix = ${prefix}
 datarootdir = ${prefix}/share
@@ -92,7 +92,6 @@ install-data:
 	$(INSTALL) -m 755 -d $(DESTDIR)$(pkgdatadir)/main/terminal/engine
 	$(INSTALL) -m 755 -d $(DESTDIR)$(pkgdatadir)/main/terminal/templates
 	$(INSTALL) -m 755 -d $(DESTDIR)$(pkgdatadir)/main/terminal/templates/gnome-terminal
-	$(INSTALL) -m 755 -d $(DESTDIR)$(pkgdatadir)/main/terminal/templates/konsole
 	$(INSTALL) -m 755 -d $(DESTDIR)$(pkgdatadir)/overrides
 	$(INSTALL) -m 755 -d $(DESTDIR)$(pkgdatadir)/themes
 	$(INSTALL) -m 755 -d $(DESTDIR)$(pkgdatadir)/themes/app
@@ -413,6 +412,7 @@ install-data:
 	$(INSTALL) -m 755 data/themes/computer/ubuntu/theme $(DESTDIR)$(pkgdatadir)/themes/computer/ubuntu/theme
 	$(INSTALL) -m 755 -d $(DESTDIR)$(bindir)
 	$(INSTALL) -m 755 bin/bashish $(DESTDIR)$(bindir)/bashish
+	$(INSTALL) -m 755 bin/bashish $(DESTDIR)$(bindir)/bashish
 	$(INSTALL) -m 755 bin/bashishtheme $(DESTDIR)$(bindir)/bashishtheme
 
 install-doc:
@@ -429,11 +429,13 @@ install-man: bashish
 	$(INSTALL) -m 755 -d $(DESTDIR)$(mandir)
 	$(INSTALL) -m 755 -d $(DESTDIR)$(mandir)/man1
 	$(INSTALL) -m 644 man/bashish.1 $(DESTDIR)$(mandir)/man1/bashish.1
+	$(INSTALL) -m 644 man/bashish.1 $(DESTDIR)$(mandir)/man1/bashish.1
 ##
 ## uninstall files
 ##
 uninstall:
 	rm -r $(DESTDIR)$(docdir)
+	rm -f $(DESTDIR)$(mandir)/man1/bashish.1
 	rm -f $(DESTDIR)$(mandir)/man1/bashish.1
 	rm -f $(DESTDIR)$(pkgdatadir)/bashish-version
 	rm -f $(DESTDIR)$(pkgdatadir)/defaults/gnome-terminal.png
@@ -753,7 +755,6 @@ uninstall:
 	rm -r $(DESTDIR)$(pkgdatadir)/themes/app
 	rm -r $(DESTDIR)$(pkgdatadir)/themes
 	rm -r $(DESTDIR)$(pkgdatadir)/overrides
-	rm -r $(DESTDIR)$(pkgdatadir)/main/terminal/templates/konsole
 	rm -r $(DESTDIR)$(pkgdatadir)/main/terminal/templates/gnome-terminal
 	rm -r $(DESTDIR)$(pkgdatadir)/main/terminal/templates
 	rm -r $(DESTDIR)$(pkgdatadir)/main/terminal/engine

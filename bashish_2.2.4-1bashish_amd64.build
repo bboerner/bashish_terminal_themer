@@ -1,0 +1,10 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc
+dpkg-buildpackage: source package bashish
+dpkg-buildpackage: source version 2.2.4-1bashish
+dpkg-buildpackage: source distribution unstable
+dpkg-buildpackage: source changed by Thomas Eriksson <arno@users.sourceforge.net>
+ dpkg-source --before-build bashish-2.2.4
+dpkg-buildpackage: host architecture amd64
+dpkg-checkbuilddeps: Unmet build dependencies: build-essential:native debhelper (>= 7)
+dpkg-buildpackage: warning: build dependencies/conflicts unsatisfied; aborting
+dpkg-buildpackage: warning: (Use -d flag to override.)
